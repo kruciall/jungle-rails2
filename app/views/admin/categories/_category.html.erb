@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <%= category.name %>
+  </td>
+  <td>
+    <%= category.products.count %>
+  </td>
+  <td>
+    <%= category.products.average(:price_cents) ? (humanized_money_with_symbol category.products.average(:price_cents) / 100): 0 %>
+  </td>
+</tr>
